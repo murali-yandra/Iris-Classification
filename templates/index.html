@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classification</title>
+    <style>
+        body {
+            background-image: url('https://wallpapershome.com/images/pages/pic_h/5347.jpg'); /* Replace 'your_image_url_here' with the actual URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .card-heading {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .input-field {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            background-color: #fff; /* White background for input fields */
+        }
+
+        .input-label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            color: #555;
+        }
+
+        .action {
+            margin-top: 20px;
+        }
+
+        .action-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .action-button:hover {
+            background-color: #0056b3;
+        }
+
+        .text-danger {
+            color: darkred;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2 class="card-heading">Iris Classification</h2>
+            <form class="card-form" action="{{ url_for('home')}}" method="POST">
+                <div class="input">
+                    <input name="SepalLength" type="number" step="any" class="input-field" required min="0.1"/>
+                    <label class="input-label">Sepal Length in cm</label>
+                </div>
+                <div class="input">
+                    <input name="SepalWidth" type="number" step="any" class="input-field" required min="0.1"/>
+                    <label class="input-label">Sepal Width in cm</label>
+                </div>
+                <div class="input">
+                    <input name="PetalLength" type="number" step="any" class="input-field" required min="0.1"/>
+                    <label class="input-label">Petal Length in cm</label>
+                </div>
+                <div class="input">
+                    <input name="PetalWidth" type="number" step="any" class="input-field" required min="0.1"/>
+                    <label class="input-label">Petal Width in cm</label>
+                </div>
+                <div class="action">
+                    <button type="submit" class="action-button">Submit</button>
+                </div>
+            </form>
+            {% if prediction %}
+                <p class="text-danger">{{ prediction }}</p>
+                <img src="{{ image }}" alt="{{ prediction }}" class="img-fluid">
+                <!-- If you want to include a URL instead of an image, replace the above line with the following:
+                <div style="height: 200px; background-color: #f0f0f0;"></div> -->
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
