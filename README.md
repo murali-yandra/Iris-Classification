@@ -26,7 +26,7 @@ The project employs a machine learning model to learn patterns from the Iris dat
 - **Version Control:** Git
 - **Repository Hosting:** GitHub
 
-## How to Do This Project
+## Getting Started
 
 To work on and replicate this project, follow these steps:
 
