@@ -4,8 +4,7 @@
 
 This project focuses on the classification of Iris flowers using machine learning techniques. The Iris dataset is a well-known dataset in the field of machine learning and is often used for introductory purposes. The goal of this project is to build and train a machine learning model that can accurately classify Iris flowers into different species based on their sepal length, sepal width, petal length, and petal width.
 
-![Overview Image](![iris](https://github.com/murali-yandra/Iris-flowers-Classification/assets/151438054/0e96d9fb-f26b-4104-bf4e-8b1e60e7f817)
-)
+![iris](https://github.com/murali-yandra/Iris-flowers-Classification/assets/151438054/0e96d9fb-f26b-4104-bf4e-8b1e60e7f817)
 
 ## Dataset
 
