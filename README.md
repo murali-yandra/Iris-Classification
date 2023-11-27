@@ -10,7 +10,7 @@ This project focuses on the classification of Iris flowers using machine learnin
 
 The dataset used in this project is the famous Iris dataset, which consists of 150 samples of Iris flowers, each belonging to one of three species: setosa, versicolor, or virginica. The dataset provides measurements for four features: sepal length, sepal width, petal length, and petal width.
 
-![Dataset Image](insert_image_url_here)
+![dataset_preview](https://github.com/murali-yandra/Iris-flowers-Classification/assets/151438054/1ecfe023-697c-4f2b-964f-bcd72706718f)
 
 ## Machine Learning Model
 
@@ -22,10 +22,9 @@ The project employs a machine learning model to learn patterns from the Iris dat
 - **Machine Learning Framework:** Scikit-learn
 - **Data Visualization:** Matplotlib, Seaborn
 - **Website Hosting:** Render
-- **How to Deploy:** Run the deployment script using the command `python deploy.py`.
-- **Deployment Script:** The deployment script is `deploy.py`.
 - **Additional Libraries:** Pandas, NumPy
 - **Version Control:** Git
+- **Repository Hosting:** GitHub
 
 ## How to Do This Project
 
